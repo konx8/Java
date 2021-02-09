@@ -1,6 +1,6 @@
 package com.generator;
 
-public class BankAccount extends User {
+public class BankAccount {
 
 
     int accountNumber;
@@ -19,6 +19,6 @@ public class BankAccount extends User {
     }
 
 
-//test
+//test 22
 
 }

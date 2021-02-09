@@ -17,15 +17,12 @@ public class Main {
         People people = new People();
 
         people.addUser("jacek2","placek2","mis2","jacek@gmail.com");
-
+        people.addUser("jacek3","placek3","mis3","jacek3@gmail.com",12341234,1000);
 
         for (int i = 1; i < 10; i++) {
             User user = new User("imie"+i, "nazwisko"+i,"login"+i);
             people.addUser(user);
             }
-
-        //people.createBankAcc(0,1000,0);
-
 
         jaxbMarshaller.marshal(people, new FileWriter("test.xml"));
         }

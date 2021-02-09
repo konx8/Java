@@ -7,17 +7,15 @@ public class User {
     String login;
     int id;
     String email;
+    BankAccount bankAccount;
 
-
-    public BankAccount getBankAccount() {
-        return bankAccount;
-    }
-
-    public void setBankAccount(BankAccount bankAccount) {
+    public void createAccount(int accountNumber, int money) {
+        BankAccount bankAccount = new BankAccount();
+        bankAccount.setAccountNumber(accountNumber);
+        bankAccount.setMoney(money);
         this.bankAccount = bankAccount;
     }
 
-    BankAccount bankAccount;
 
     public User(String n, String s, String l, int id) {
         this.name = n;

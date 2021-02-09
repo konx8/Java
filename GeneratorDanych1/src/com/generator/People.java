@@ -30,6 +30,19 @@ public class People {
 
     }
 
+    public void addUser(String n, String s, String l, String email,int accountNum, int money) {
+        User user = new User(n, s, l, getNextId());
+        user.createAccount(accountNum,money);
+        if (emailAdress(email)){
+            user.setEmail(email);
+        }
+        else {
+            user.setEmail("brak emaila");
+        }
+        users.add(user);
+
+    }
+
     public void addUser(String n, String s, String l, String email) {
         User user = new User(n, s, l, getNextId());
         if (emailAdress(email)){
@@ -81,11 +94,6 @@ public class People {
         return false;
     }
 
-    public void createBankAcc(int index,BankAccount bankAccount ,int money){
-        users.get(index).setBankAccount(bankAccount);;
-
-
-    }
 
 }
 
